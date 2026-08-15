@@ -1,0 +1,39 @@
+name: Validate marketplace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check JSON manifests parse
+        run: |
+          for f in .claude-plugin/marketplace.json plugins/*/.claude-plugin/plugin.json; do
+            echo "checking $f"
+            jq empty "$f"
+          done
+
+      - name: Check every listed local plugin source exists
+        run: |
+          jq -r '.plugins[].source | if type == "string" then . else empty end' .claude-plugin/marketplace.json |
+          while read -r src; do
+            echo "checking $src"
+            test -d "$src" || { echo "missing plugin directory: $src"; exit 1; }
+          done
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: claude plugin validate
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          for dir in plugins/*/; do
+            echo "validating $dir"
+            claude plugin validate "$dir"
+          done

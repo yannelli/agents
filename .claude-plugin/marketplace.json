@@ -1,0 +1,30 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "yannelli-agents",
+  "description": "Ryan Yannelli's marketplace of Claude Code plugins, skills, and agents",
+  "version": "0.1.0",
+  "owner": {
+    "name": "Ryan Yannelli",
+    "url": "https://github.com/yannelli"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "starter",
+      "displayName": "Starter",
+      "description": "Example plugin demonstrating the skill, command, and agent formats. Use it as a template for new plugins.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ryan Yannelli",
+        "url": "https://github.com/yannelli"
+      },
+      "repository": "https://github.com/yannelli/agents",
+      "license": "MIT",
+      "keywords": ["example", "template", "starter"],
+      "category": "productivity",
+      "source": "./plugins/starter"
+    }
+  ]
+}
