@@ -9,7 +9,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Check JSON manifests parse
         run: |
@@ -26,9 +26,9 @@ jobs:
             test -d "$src" || { echo "missing plugin directory: $src"; exit 1; }
           done
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
 
       - name: claude plugin validate
         run: |

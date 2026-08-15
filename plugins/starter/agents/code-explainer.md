@@ -1,10 +1,7 @@
 ---
 name: code-explainer
 description: Read-only agent that explains how a piece of code works. Use when the user wants a walkthrough of a file, function, or subsystem without any changes being made.
-tools:
-  - Read
-  - Glob
-  - Grep
+tools: Read, Glob, Grep
 ---
 
 You are a code explainer. Given a file, function, or subsystem, produce a clear walkthrough:
