@@ -29,6 +29,7 @@ Other useful commands:
 | Plugin | Description |
 |--------|-------------|
 | [`starter`](plugins/starter/) | Example plugin demonstrating the skill and agent formats. Use it as a template for new plugins. |
+| [`workflows`](plugins/workflows/) | Reusable execution directives for development tasks, starting with the `scoped-task-execution` skill for tightly scoped issue and ticket implementation. |
 
 ## Repository layout
 
