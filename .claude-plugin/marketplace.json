@@ -25,6 +25,21 @@
       "keywords": ["example", "template", "starter"],
       "category": "productivity",
       "source": "./plugins/starter"
+    },
+    {
+      "name": "workflows",
+      "displayName": "Workflows",
+      "description": "Reusable execution directives for development tasks, starting with tightly scoped issue and ticket implementation.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Ryan Yannelli",
+        "url": "https://github.com/yannelli"
+      },
+      "repository": "https://github.com/yannelli/agents",
+      "license": "MIT",
+      "keywords": ["workflow", "scope", "tickets", "execution"],
+      "category": "productivity",
+      "source": "./plugins/workflows"
     }
   ]
 }
