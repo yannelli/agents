@@ -1,0 +1,20 @@
+{
+  "name": "yannelli-agents",
+  "interface": {
+    "displayName": "Yannelli Agents"
+  },
+  "plugins": [
+    {
+      "name": "telegram-approvals",
+      "source": {
+        "source": "local",
+        "path": "./plugins/telegram-approvals"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

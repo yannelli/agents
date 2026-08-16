@@ -1,8 +1,8 @@
 # yannelli-agents
 
-A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) of plugins, skills, and agents.
+A marketplace of plugins, skills, and agents for [Claude Code](https://code.claude.com/docs/en/plugin-marketplaces) and Codex.
 
-## Installation
+## Claude Code installation
 
 Add the marketplace from inside Claude Code:
 
@@ -24,12 +24,21 @@ Other useful commands:
 /plugin disable starter@yannelli-agents      # turn a plugin off without uninstalling
 ```
 
+## Codex installation
+
+Add the marketplace from a terminal, then install a compatible plugin from the Codex plugin browser:
+
+```bash
+codex plugin marketplace add yannelli/agents
+```
+
 ## Available plugins
 
 | Plugin | Description |
 |--------|-------------|
 | [`starter`](plugins/starter/) | Example plugin demonstrating the skill and agent formats. Use it as a template for new plugins. |
 | [`workflows`](plugins/workflows/) | Reusable execution directives for development tasks, starting with the `scoped-task-execution` skill for tightly scoped issue and ticket implementation. |
+| [`telegram-approvals`](plugins/telegram-approvals/) | Telegram notifications and remote tool approvals for Claude Code and Codex. |
 
 ## Repository layout
 

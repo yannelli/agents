@@ -1,0 +1,22 @@
+{
+  "name": "telegram-approvals",
+  "version": "0.1.0",
+  "description": "Send Codex notifications and approve or deny tool requests from Telegram.",
+  "author": {
+    "name": "Ryan Yannelli",
+    "url": "https://github.com/yannelli"
+  },
+  "repository": "https://github.com/yannelli/agents",
+  "license": "MIT",
+  "keywords": ["telegram", "notifications", "approvals", "hooks"],
+  "skills": "./skills/",
+  "hooks": "./hooks/codex.json",
+  "interface": {
+    "displayName": "Telegram Approvals",
+    "shortDescription": "Telegram notifications and tool approvals",
+    "longDescription": "Send Codex turn notifications to Telegram and approve or deny tool permission requests with inline buttons.",
+    "developerName": "Ryan Yannelli",
+    "category": "Productivity",
+    "capabilities": ["Hooks"]
+  }
+}

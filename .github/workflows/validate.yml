@@ -26,6 +26,9 @@ jobs:
             test -d "$src" || { echo "missing plugin directory: $src"; exit 1; }
           done
 
+      - name: Test Telegram hook
+        run: python3 -m unittest discover -s plugins/telegram-approvals/tests
+
       - uses: actions/setup-node@v7
         with:
           node-version: 24
