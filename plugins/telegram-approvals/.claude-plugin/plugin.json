@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "telegram-approvals",
+  "displayName": "Telegram Approvals",
+  "description": "Send Claude Code notifications and approve or deny tool requests from Telegram.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ryan Yannelli",
+    "url": "https://github.com/yannelli"
+  },
+  "repository": "https://github.com/yannelli/agents",
+  "license": "MIT",
+  "keywords": ["telegram", "notifications", "approvals", "hooks"],
+  "defaultEnabled": false,
+  "hooks": "./hooks/claude.json",
+  "userConfig": {
+    "bot_token": {
+      "type": "string",
+      "title": "Telegram bot token",
+      "description": "Token issued by BotFather for a dedicated bot.",
+      "sensitive": true,
+      "required": true
+    },
+    "chat_id": {
+      "type": "string",
+      "title": "Telegram chat ID",
+      "description": "Private chat or group that receives notifications.",
+      "required": true
+    },
+    "allowed_user_ids": {
+      "type": "string",
+      "title": "Allowed Telegram user IDs",
+      "description": "Comma-separated numeric user IDs allowed to decide requests.",
+      "required": true
+    },
+    "approval_timeout": {
+      "type": "number",
+      "title": "Approval timeout",
+      "description": "Seconds to wait for a Telegram decision (15-300).",
+      "default": 120,
+      "min": 15,
+      "max": 300
+    }
+  }
+}
